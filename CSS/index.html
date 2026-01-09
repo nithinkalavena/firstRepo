@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">    
+    <style>
+    h1{
+        color: blue;
+    }
+    li::before {
+        content: "✓";
+        color:crimson
+    }
+    /* li::after{
+        content: "ready";
+        color: aqua;
+    } */
+     li::selection{
+        background-color: yellow;
+        color: red;        
+     }
+    /* button:hover{
+        color: hotpink;
+    } */
+</style>
+</head>
+<body>
+    <ul>
+        <li>Apples</li>
+        <li>Bananas</li>
+        <li>Oranges</li>
+    </ul>
+    <h1>this is css </h1>
+    <div>
+        <button>Click here</button>
+    </div>
+    <div>
+    <button>Right here</button>
+    </div>
+    <div><button>Center here</button></div>
+    <div><button>Left here</button></div>
+</body>
+</html>
+
+<!-- Priority
+1) inline
+2) internal
+3) external
+
+selectors
+1) id
+2) class
+3) tag name -->
