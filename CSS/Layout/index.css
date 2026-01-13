@@ -1,27 +1,28 @@
-.flex{
+.flex1{
     display: flex;
     justify-content: center;
     align-items: center; 
-    margin-top: 5px;   
-    min-height: 50px;
+    margin-top: 3px;   
+    min-height: 20px;
 }
 #div1{
     justify-content: left;
+    margin-top: 3px;
 }
 nav,#div3,#div1{
     background-color: gray;
-    padding-left: 20px;   
+    padding-left: 10px;   
 }
 #div4{    
     justify-content: space-between;
 }
-.box,.box2{
+.box1,.box2{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 29%;
     background-color: gray;
-    min-height: 350px;
+    min-height: 150px;
 }
 .box2{    
     width: 69%;

@@ -1,0 +1,91 @@
+#parent,#parent2{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+#layout1,#layout2,#layout3,#layout4{
+    flex: 1;
+}
+/* #div1-3{
+    display: flex;
+    background-color: gray;
+    margin-top: 3px;
+    width: 100%; 
+} */
+#parent2-1{
+    display: flex;
+    margin-top: 3px;
+}
+/* .flex3{
+    width: 20%;
+    height: 200px;
+} */
+#sidebar{
+    flex: 0.2;
+    padding: 10px;
+}
+#main{    
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    margin-top: 3px;
+}
+#div3-3,#div4-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#div3-3{
+    height: 100px;
+    background-color: gray;
+    width: 100%;
+}
+#div4-3{
+    height: 180px;
+    background-color: gray;
+    width: 100%;
+    margin-top: 3px;
+}
+/* #foot{
+    margin-top: 3px;
+} */
+#layout4-1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3px;
+    background-color: gray;
+    padding-left: 20px;
+    padding-right: 60px;
+}
+.row{
+    display: flex;
+    gap: 15px;
+}
+.box{
+    flex: 1;
+    height: 40px;
+    background-color: gray;
+    margin-top: 5px;
+}
+#bigBox{
+    display: flex;
+    gap: 15px;
+}
+.box4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 102px;
+    background-color: gray;
+    margin-top: 5px;
+}
+footer{
+    margin-top: 3px;
+    display: flex;
+    justify-content: center;
+}
+#lastfooter{
+    margin-top: 4px;
+}
