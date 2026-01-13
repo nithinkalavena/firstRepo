@@ -1,23 +1,36 @@
-#contentBox{
+/* #contentBox{
     box-sizing: content-box;
-    border: 10px solid black;
+    border: 2px solid black;
     min-height: 40px;
-    min-width: 60px;
-    padding: 5px;
-    margin: 20px;
+    min-width: 60px; 
+    padding: 10px;
 }
-#contentBox1{
+/* #contentBox1{
     box-sizing: content-box;
     border: 2px solid black;
     min-height: 40px;
     min-width: 60px;
-    /* padding: 5px; */
     margin: 20px;
-}
+} 
 #borderBox{
     box-sizing: border-box;
-    border: 10px solid black;
+    border: 2px solid black;
     min-height: 40px;
-    min-width: 60px; 
-    padding: 5px;   
+    min-width: 60px;  
+    padding: 10px;   
+} */
+ #contentBox {
+  box-sizing: content-box;
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+  border: 10px solid black;
+}
+
+#borderBox {
+  box-sizing: border-box;
+  width: 100px;
+  height: 40px;
+  padding: 5px;
+  border: 10px solid black;
 }
