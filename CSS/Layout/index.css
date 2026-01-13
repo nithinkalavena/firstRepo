@@ -1,53 +1,31 @@
-body{
-    font-family:'Times New Roman', Times, serif;
-    font-size: 20px;
-    margin: 0px;
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    margin-top: 5px;   
+    min-height: 50px;
 }
 #div1{
-    display: flex   ;
-    background-color: gray;
-    padding: 10px;
-    align-items: center;
     justify-content: left;
 }
-nav{
-    display: flex;
+nav,#div3,#div1{
     background-color: gray;
-    padding: 10px;
-    margin-top: 5px;    
+    padding-left: 20px;   
+}
+#div4{    
+    justify-content: space-between;
+}
+.box,.box2{
+    display: flex;
     justify-content: center;
-}
-#div3{
-    display: flex;
+    align-items: center;
+    width: 29%;
     background-color: gray;
-    margin-top: 5px;
-    padding: 10px;
-    justify-content: center;    
-}
-#div4{
-    display: flex;   
     min-height: 350px;
-    margin-top: 5px;        
-    gap: 20px;
 }
-#sideBar{
-    min-width: 30%;
-    background-color: gray;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-#bodyArea{
-    min-width: 68.45%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: gray;
+.box2{    
+    width: 69%;
 }
 footer{
-    display: flex;
     background-color: gray;
-    padding: 20px;
-    justify-content: center;
-    margin-top: 5px;
 }
