@@ -6,20 +6,10 @@
 #layout1,#layout2,#layout3,#layout4{
     flex: 1;
 }
-/* #div1-3{
-    display: flex;
-    background-color: gray;
-    margin-top: 3px;
-    width: 100%; 
-} */
 #parent2-1{
     display: flex;
     margin-top: 3px;
 }
-/* .flex3{
-    width: 20%;
-    height: 200px;
-} */
 #sidebar{
     flex: 0.2;
     padding: 10px;
@@ -46,9 +36,6 @@
     width: 100%;
     margin-top: 3px;
 }
-/* #foot{
-    margin-top: 3px;
-} */
 #layout4-1{
     display: flex;
     justify-content: space-between;
