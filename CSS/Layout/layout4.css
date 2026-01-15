@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#container {
+    width: 300px;
+    background-color: gray;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 4px;
+}
+
+#header {
+    grid-column: 1 / -1;
+    background-color: lightgray;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.box {
+    background-color: lightgray;
+    height: 40px;
+}
+
+#bottom {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+}
+
+#bottom div{
+    background-color: lightgray;
+    text-align: center;
+    padding: 8px;
+}
+
+#footer {
+    grid-column: 1 / -1;
+    background-color: lightgray;
+    text-align: center;
+    padding: 8px;
+}
