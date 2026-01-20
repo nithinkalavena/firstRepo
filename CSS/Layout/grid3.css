@@ -1,0 +1,60 @@
+body{
+    margin: 0px;
+}
+@media (orientation: portrait) and (min-width:320px){    
+    #container{
+        display: grid;        
+    }
+    .mobile{
+        height: 50px;        
+    }
+    .mobile,#mobile-top,#circles{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #mobile-top{
+        height: 20px;        
+        background-color: skyblue;       
+    }
+    #title{
+        font-size: 8px;
+        width: 90px;
+        border: 1px solid black;
+        padding-left: 10px;
+        background-color: antiquewhite;
+    }
+    #circles{
+        gap: 10px;
+        padding-left: 10px;
+    }
+    #circles span{        
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: antiquewhite;
+    }
+    #item1{
+        background-color:rgb(76, 76, 196);
+        height: 10px;        
+    }
+    #item2{
+        background-color: #5376a7;
+    }
+    #item3{
+        height: 80px;  
+        background-color: rgb(249, 222, 222);      
+    }
+    #item4{
+        background-color: rgb(80, 175, 216);
+    }
+    #item5{
+        background-color: rgb(222, 191, 13);
+    }
+    #item6{
+        background-color: crimson;
+    }
+    #item7{
+        background-color:blueviolet;
+    }
+}
