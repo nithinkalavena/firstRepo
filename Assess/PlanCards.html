@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #container{
+        display: flex;
+        gap: 30px;
+        justify-content: center;
+        /* align-items: center; */
+    }
+    .card{
+        background: aliceblue;
+        padding: 30px;
+        width: 250px;
+        text-align: center;
+        border: 2px solid black;
+        border-radius: 10px;
+
+        transition: transform 0.5s ease;
+    }
+    .card:hover{
+        transform: scale(1.1);
+    }
+</style>
+<body>
+    <!-- <center> -->
+    <div id="container">
+
+        <div class="card">
+            <h2>Basic</h2>
+            <ul>
+                <li>Iqoo 15R</li>
+                <li>44999</li>
+            </ul>
+            <button>choose mobile</button>
+        </div>
+
+        <div class="card">
+            <h2>Standard</h2>
+            <ul>
+                <li>Oneplus 15R</li>
+                <li>45999</li>
+            </ul>
+            <button>choose mobile</button>
+        </div>
+
+        <div class="card">
+            <h2>Flagship</h2>
+            <ul>
+                <li>S26 ultra</li>
+                <li>1lakh+</li>
+            </ul>
+            <button>choose mobile</button>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fetcBoth()">Fetch Data</button>
+    <h3>Quote: <p id="quote"></p></h3>
+    <h3>User: <p id="user"></p></h3>
+    <script>
+        let quote = document.getElementById('quote')
+        let user = document.getElementById('user')
+
+        function fetcBoth(){
+            quote.textContent = 'loading...'
+            user.textContent = 'loading...'
+            
+            Promise.all([
+                fetch('https://dummyjson.com/quotes/random').then(d=>d.json()),
+                fetch('https://randomuser.me/api/').then(d=>d.json())            
+            ])
+
+            .then(([quoteData,userData])=>{
+                quote.textContent = quoteData.quote
+                
+                const user1 = userData.results[0]
+                user.textContent = user1.name.first +' - '+user1.name.last
+            })
+            .catch(err=>{
+                quote.textContent='error fetching data'
+                user.textContent='error fetching data'
+                console.log(err)
+            })
+        }
+    </script>
+</body>
+</html>

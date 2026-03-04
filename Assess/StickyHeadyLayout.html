@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        header{
+            position: fixed;
+            width: 100%;
+            background-color: lightcyan;
+            height: 60px;
+            top: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;            
+        }
+        main{
+            margin-top: 60px;
+            padding: 20px;
+        }
+        .content{
+            height: 1200px;
+            background-color: linear-gradient(white,lightgray);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Sticky Header
+    </header>
+    <main>
+        <div class="content">
+            <h2>scroll down</h2>
+            <p>this content scrolls under the header</p>
+        </div>
+    </main>
+</body>
+</html>

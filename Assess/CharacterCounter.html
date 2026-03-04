@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>character content</h2>
+    <textarea name="" id="message" placeholder="type something here...."></textarea>
+    <p>characters typed : <span id="count">0</span></p>
+    <script>
+        const textarea = document.getElementById('message')
+        const count = document.getElementById('count')
+        textarea.addEventListener('input',function(){
+            let textLength = textarea.value.length
+            count.textContent = textLength 
+        })
+    </script>
+</body>
+</html>

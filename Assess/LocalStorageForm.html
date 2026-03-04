@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>user form</h2>
+
+    <form action="" id="userform">
+        <label for="">Name: </label>
+        <input type="text" required id="name"><br><br>
+        <label for="">email:</label>
+        <input type="email" required id="email">
+        <br><br>
+        <button type="submit">Submit</button>        
+    </form>
+    <hr>
+        <h3>stored data: </h3>
+        <p id="displayData"></p>
+        <script>
+            const form = document.getElementById('userform')
+            const display = document.getElementById('displayData')
+
+            form.addEventListener('click', function(e){
+                e.preventDefault()
+
+                const name = document.getElementById('name').value
+                const email = document.getElementById('email').value
+
+                localStorage.setItem('username',name)
+                localStorage.setItem('email',email)
+
+                display.innerHTML=`Name : ${name}  <br> Email: ${email}`
+            })
+
+            // window.onload = function(){
+            //     const storedName = localStorage.getItem('username')
+            //     const storedemail = localStorage.getItem('email')
+            //     if(storedName&&storedemail){
+            //         display.innerHTML="name: "+storedName+'<br>Email: '+storedemail
+            //     }
+            // }
+        </script>
+</body>
+</html>

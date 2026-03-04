@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input{
+            width: 100px;
+            height: 30px;
+            background-color: aliceblue;
+            border-radius: 15px;
+            color: teal;
+            font-family: monospace;
+        }
+        #getBtn:hover{
+            box-shadow: 4px 4px 4px black;
+            color: blue;
+        }
+        #clearBtn:hover{
+            box-shadow: 4px 4px 4px black;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Fetch the user data</h1>
+        <input type="button" value="fetch" id="getBtn" onclick="getData()">
+        <input type="button" value="clear" id="clearBtn" onclick="clearData()" style="display: none;"><hr>
+        <div id="output"></div>
+    </center>
+    <script src="fetch.js"></script>
+</body>
+</html>
