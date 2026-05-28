@@ -1,0 +1,36 @@
+.container{
+        background: lightgreen;
+        border-radius: 3px;
+        display: grid;
+        grid-template-rows: 30px 50px 70px 20px;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+    }
+    .section{
+        border: 1px solid black;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #i1,#i5{
+        grid-column: 1/-1;
+    }
+    #i2{
+        grid-row: 2/-1;
+    }
+    #i2 div{        
+        display: flex;
+        flex-direction: column;              
+    }
+    a{
+        text-decoration: none;
+        padding: 8px;
+    }
+    #i3{
+        grid-column: 2/-1;
+    }
+    #i4{
+        grid-column: 2/-1;
+        grid-row: 3/-1;
+    }

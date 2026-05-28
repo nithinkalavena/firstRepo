@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // setTimeout
+        console.log('start')
+        setTimeout(() => {
+            console.log('executed after 2 seconds')
+        }, 2000);
+        console.log('end')
+        // setInterval
+        let count = 0
+        // let interalId = setInterval(() => {
+        //     count++
+        //     console.log('count',count)
+        //     if(count===5)
+        //         clearInterval(interalId)
+        // }, 1000);
+        // clearTimeout
+        let timer = setTimeout(() => {
+            console.log('this will not run')
+        }, 3000);
+        clearTimeout(timer)
+        // clearInterval
+        let i = 0
+        let id = setInterval(() => {
+            i++
+            console.log(i)
+        }, 1000);
+        setTimeout(() => {
+            clearInterval(id)
+        }, 3000);
+
+        // example
+        // setInterval(() => {
+        //     let time = new Date().toLocaleTimeString()
+        //     console.log(time)
+        // }, 1000);
+    </script>
+</body>
+</html>

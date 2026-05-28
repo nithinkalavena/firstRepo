@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // IIFE(immediately invoked funcion expression)
+        // a function that runs immediately after it is defined
+    //    (function (){
+    //     console.log('IIFE executed')
+    //    })()
+       (function (name) {
+        console.log('Hello',name)
+        })('Nithin')
+        //currying
+        // breaking a function with multiple arguments into multiple functions with one arguments each
+        function add(a){
+            return function(b){
+                return function(c){
+                    return a+b+c
+                }
+            }
+        }
+        console.log(add(2)(3)(4))
+        //ES6 arrow version
+        let multiply = a=>b=>c=> a*b*c
+        console.log(multiply(2)(3)(4))
+        //First-class functions
+        // functions in javascript are treated like values
+        function greet(){
+            return 'hello'
+        }
+        let sayHello = greet
+        console.log((sayHello()))
+        // High-order functions(HOF)        
+        // a function that takes another function as argument or returns a function
+    function operate(a,b,operation){
+        return operation(a,b)
+    }
+    function adder(x,y){
+        return x+y
+    }
+    console.log(operate(5,2,adder))
+    // Array methods
+    let nums = [1,2,3,4]
+    let doubled = nums.map(n=>n*2)
+    console.log(doubled)
+    //pure function
+    // same input - same output
+    //impure function
+    //depends on external data or modifies outside state
+    //Recursion
+    // a function that calls itself until a condition is met
+    function factorial(n){
+        if(n===1) return 1
+        return n * factorial(n-1)
+    }
+    console.log('factorial: '+factorial(5))
+    function countdown(n){
+        if(n===0) return
+        console.log(n)
+        countdown(n-1)
+    }
+    countdown(5)
+    // Default export
+    // a module can have only one default export
+    // export default function add(a,b){
+    //     return a+b
+    // }
+    </script>
+</body>
+</html>

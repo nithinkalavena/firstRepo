@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 30px;
+        }
+        .table-container{
+            overflow-x: auto;
+        }
+        tbody tr:hover{
+            background: #d6eaff;
+            cursor: pointer;
+        }
+        tbody tr:nth-child(even){
+            background: #f2f2f2;
+        }
+        td{
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                    <th><a href="#">ID</a></th>
+                    <th><a href="#">Name</a></th>
+                    <th><a href="#">Age</a></th>
+                    <th><a href="#">City</a></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Nithin</td>
+                    <td>25</td>
+                    <td>Hyd</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>K Nithin</td>
+                    <td>26</td>
+                    <td>Blg</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Kalavena Nithin</td>
+                    <td>27</td>
+                    <td>mumbai</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Kalavena Nithin Mudhiraj</td>
+                    <td>28</td>
+                    <td>Pune</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>       
+<body>
+    <script>
+        let array = [1,2,3]
+        array.push(4) //end
+        array.unshift(0) //start
+        array.splice(2,0,99) //middle
+        let users = ['nithin','rahul','kiran']
+        let res = users.find(n=>n.startsWith('n'))
+        console.log(res)
+        array.pop() //last
+        array.shift() //first
+        array.splice(1,1) //specific
+        console.log(array)
+
+        let a = [1,2]
+        let b = [3,4]
+        // let c = a.concat(b)
+        let c = [...a,...b]
+        console.log(c)
+
+        let arr = [1,[2,3],[4,[5]]]
+        // arr.flat()
+        console.log(arr.flat(Infinity))
+
+        let arrr = [10,20,30]
+        for(let i=0; i<arrr.length; i++){
+            console.log(arrr[i])
+        }
+        for(let val of arrr)
+            console.log(val)
+
+        // The main difference between forEach and map methods is map returns new array where forEach cannot
+        let j = arrr.forEach(v=>console.log(v))
+        console.log(j)
+        let k = arrr.map(v=>v*2)
+        console.log(k)
+
+        let ary = ['f','p','h']
+        console.log(ary.sort())
+
+        console.log(ary.join('-'))
+        let ary2 = [99,899,43,5,9]
+        console.log(ary2.sort((a,b)=>a-b))
+
+        let user = [
+            {name:'nithin',age:25},
+            {name:'rahul',age:58},
+            {name:'kiran',age:14}
+        ]
+        let result = user
+        .filter(n=>n.age>18)
+        .map(n=>n.name)
+        console.log(result)
+    </script>
+</body>
+</html>

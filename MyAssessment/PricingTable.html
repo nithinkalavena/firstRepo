@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <style>
+        #container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+        .content{
+            border: 2px solid black;
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .content:hover{
+            transform: scale(1.05);
+            background-color: antiquewhite;
+        }
+        #container div:nth-child(2){
+            background-color: lightgray;
+        }
+        li{
+            list-style-type: none;
+            padding: 5px;
+        }
+        button{
+            width: 65px;
+            height: 25px;
+            border-radius: 10px;
+            border: 0px;
+            /* cursor: pointer; */
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body><center>
+    <div id="container">
+        <div class="content">
+            <h3>Basic</h3>
+            <li>Price: $200</li>
+            features
+            <li>feature 1</li>
+            <li>feature 2</li>
+            <li>feature 3</li>
+            <br>
+            <button>Buy</button>
+        </div>
+        <div class="content" id="recomded">
+            <h3>Standard</h3>
+            <li>Price: $300</li>
+            features
+            <li>feature 1</li>
+            <li>feature 2</li>
+            <li>feature 3</li>
+            <br>
+            <button>Buy</button>
+        </div>
+        <div class="content">
+            <h3>Premium</h3>
+            <li>Price: $400</li>
+            features
+            <li>feature 1</li>
+            <li>feature 2</li>
+            <li>feature 3</li>
+            <br>
+            <button>Buy</button>
+        </div>
+    </div>
+    </center>
+</body>
+</html>

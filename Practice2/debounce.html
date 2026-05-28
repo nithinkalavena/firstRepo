@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head> 
+<body>
+    <h3>Search</h3>
+    <input type="text" id="search" placeholder="type something...">
+    <script>
+        var t
+        function debounce(){
+            clearTimeout(t)
+            t=setTimeout(() => {
+                console.log('api triggered')
+            }, 500);
+        }
+        document.getElementById('search').addEventListener('keyup',debounce)
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let s1 = 'listen'
+        let s2 = 'silent'
+        let allCharPresent = true
+        for(let i=0; i<s1.length; i++){
+            let isS1CharPresent = false
+            for(let j=0; j<s2.length; j++){
+                if(s1[i]==s2[j]){
+                    isS1CharPresent=true
+                    break
+                }                
+            }
+            let isS2CharPresent = false
+            for(let k=0; k<s1.length; k++){
+                if(s2[i]==s1[k]){
+                    isS2CharPresent=true
+                    break
+                }
+            }
+            if(!isS1CharPresent||!isS2CharPresent){
+                allCharPresent=false
+                break
+            }            
+        }
+        if(allCharPresent && s1.length==s2.length){
+            console.log(s1,'is a anagram')
+        }
+        else{
+            console.log(s1,'is not a anagram')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input:focus{
+            box-shadow: 2px 2px 3px red;
+        }
+        label{
+            color:darkred;
+        }
+        form{
+            background: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- CSS Specificity 
+    1.Inline style (Specificity = 1000)
+    2.Id selector (Specificity = 100)
+    3.Class/Attribute/Pseudo Class (Specificity = 10)
+    4.Element selector (Specificity = 1)
+    also same Specificity -> last rule wins -->
+    <!-- Inline > ID > Class > Element -->
+
+    <!-- !important overrides all the style -->
+    <form action="">
+        <h2>Login Details</h2>
+        <label for="">username</label>
+        <input type="text" name="" id="" required><br> <br>
+        <label for="">Password</label>
+        <input type="password" pattern="[0-9]{5}"> <br><br>
+        <button>Submit</button>
+    </form>
+    <script>
+        let user = {name:'nithin',age:25}
+        // localStorage.setItem('user',JSON.stringify(user))
+        // localStorage.removeItem('user')
+    </script>
+</body>
+</html>

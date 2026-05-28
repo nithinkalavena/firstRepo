@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let obj1 = {
+            name:'nithin',
+            age:25,
+            city:'hyd'
+        }
+        let obj2 = {
+            name:'nithin',
+            age:26,
+            city:'hyd'
+        }
+
+        function getObjectDiff(obj1,obj2){
+        let diff = {}
+
+        for(let key in obj2){
+            if(obj1[key] !== obj2[key]){
+                diff[key] = obj2[key]
+            }
+        }
+        return diff
+        }
+
+        console.log(getObjectDiff(obj1,obj2))
+    </script>
+</body>
+</html>

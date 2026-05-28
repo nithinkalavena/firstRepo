@@ -1,0 +1,28 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var employees=[
+            {name:'nithin',dept:'CEO'},
+            {name:'sai',dept:'it'},
+            {name:'harshi',dept:'it'},
+            {name:'mouni',dept:'technical lead'}
+        ]
+    function groupEmp(employees){
+        var result={}
+        for(var i=0; i<employees.length; i++){
+            var dept = employees[i].dept
+            result[dept]=result[dept]||[]
+            result[dept].push(employees[i])
+        }
+        return result
+    }
+    console.log(groupEmp(employees))
+    </script>
+</body>
+</html>

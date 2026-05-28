@@ -14,16 +14,19 @@
         <label for="">email:</label>
         <input type="email" required id="email">
         <br><br>
-        <button type="submit">Submit</button>        
+        <button type="submit">Submit</button>  
+              
     </form>
+    <!-- <button id="rem">Remove</button> -->
     <hr>
         <h3>stored data: </h3>
         <p id="displayData"></p>
         <script>
             const form = document.getElementById('userform')
             const display = document.getElementById('displayData')
+            let rem=document.getElementById('rem')
 
-            form.addEventListener('click', function(e){
+            form.addEventListener('submit', function(e){
                 e.preventDefault()
 
                 const name = document.getElementById('name').value
@@ -31,9 +34,15 @@
 
                 localStorage.setItem('username',name)
                 localStorage.setItem('email',email)
-
+                
                 display.innerHTML=`Name : ${name}  <br> Email: ${email}`
             })
+
+            // if(localStorage.getItem('username')){
+            // rem.addEventListener('click',function(){
+            //     localStorage.removeItem('username')
+            //     localStorage.removeItem('email')
+            // })}
 
             // window.onload = function(){
             //     const storedName = localStorage.getItem('username')

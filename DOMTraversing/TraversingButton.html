@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <h2>Title</h2>
+        <p id="text">Hello World</p>
+        <button onclick="run()">Click Me</button>
+    </div>
+    <script>
+        function run(){
+            let text = document.getElementById('text')
+            
+            let parent = text.parentElement
+            parent.style.border = '2px solid red'
+
+            let firstChild = parent.firstElementChild
+            firstChild.style.color = 'blue'
+
+            let next = text.nextElementSibling
+            next.style.backgroundColor = 'yellow'
+            next.style.border = '0px'
+            next.style.borderRadius = '8px'
+            next.style.padding = '10px'
+        }
+    </script>
+</body>
+</html>

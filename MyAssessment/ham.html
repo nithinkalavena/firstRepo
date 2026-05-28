@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #lines span{
+            width: 50px;
+            height: 3px;            
+            background-color: red;
+            display: block;
+            margin: 5px 0;  
+            cursor: pointer;          
+        }
+        #lists{
+            max-height: 0;
+            background-color: #333;
+            width: 150px;
+            color: white;
+            text-align: center;
+            transition:max-height 0.4s ease;
+            border-radius: 3px;
+        }
+        #lists li{
+            font-size: 20px;
+            padding: 10px;
+        }
+        #lists.active{
+            max-height: 200px;
+        }
+        #lines.active span:nth-child(odd){
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="lines" onclick="a()">
+            <span></span><span></span><span></span>
+        </div>
+        <div id="lists">
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </div>
+    </div> 
+    <script>
+        function a(){
+            document.getElementById('lists').classList.toggle('active')
+            document.getElementById('lines').classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

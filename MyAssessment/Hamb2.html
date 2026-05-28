@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #lines{
+            cursor: pointer;
+        }
+        #lines span{
+            width: 50px;
+            height: 3px;
+            background: red;
+            border-radius: 2px;
+            display: block;
+            margin: 6px 0;
+        }
+        li{
+            list-style: none;
+            padding: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        nav{
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 150px;
+            height: 50%;
+            background-color: #333;
+            border-radius: 0px 10px 10px 0px;
+            color: white;
+        }
+        #MenuList.active{
+            transform: translateX(0);
+        }
+        #MenuList{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #lines.active span:nth-child(1){
+            transform: rotate(45deg) translate(5px,5px);
+        }
+        #lines.active span:nth-child(2){
+            opacity: 0;
+        }
+        #lines.active span:nth-child(3){
+            transform: rotate(-45deg) translate(5px,-5px);
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="lines" onclick="to()">
+            <span></span><span></span><span></span>
+        </div>
+        <nav id="MenuList">
+            <li>Home</li>
+            <li>Services</li>
+            <li>About</li>
+            <li>Contact</li>
+        </nav>
+    </div>
+    <script>
+        function to(){
+            document.getElementById('MenuList').classList.toggle('active')
+            document.getElementById('lines').classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name:'Nithin',
+            age:25
+        }
+        console.log('Original object',person)
+        //dynamic object
+        person.state='Telangana'
+        delete person.age
+        console.log('after dynamic object',person)
+        //clone object
+        let clone = {...person}
+        console.log('cloned object',clone)
+        //iterating object
+        console.log('iterating object:')
+        for(let key in person)
+            console.log(key+':',person[key])
+        //math object
+        let randomNumber = Math.floor(Math.random()*100)
+        console.log('randomNumber:',randomNumber)
+        //garbage collector
+        let temp = {data:'temporary'}    
+        temp = null  
+        //date object
+        let now = new Date()
+        console.log('current date:',now.toDateString())
+        console.log('current time:',now.toLocaleTimeString())
+        //temlate literals
+        let message = `Hello ${person.name},Welcome!`
+        console.log(message)
+        //string object
+        let text = 'javascript'
+        console.log('uppercase',text.toUpperCase())
+        console.log('includes scipt:',text.includes('script'))
+        console.log('split:',text.split(''))
+    </script>
+</body>
+</html>

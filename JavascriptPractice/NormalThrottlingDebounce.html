@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click</button> <br><br>
+    <input type="text" id="timer">
+    <!-- //NormalEvent executes every time the event occurs
+    //Throttling executes at most once in a fixed time interval
+    //Debouce executes only after the event stops for a specified time
+
+    //Normal events run on every trigger, Throttling limits how often a function runs, and debouncing delays
+    //execution until the user stops triggering the event. -->
+    <script>
+        //Normal Event
+        let a = 0
+        let b = 0
+        let c = 0
+        document.getElementById('btn').addEventListener('click',function(){
+            a++
+            console.log(`a = ${a}`)
+        })
+
+        //Throttling
+        let lastClick = 0
+        document.getElementById('btn').addEventListener('click',function(){
+            let current = Date.now()
+            if(current-lastClick>2000){
+                b++
+                console.log(`b = ${b}`)
+                lastClick = current
+            }            
+        })   
+        
+        //debouncing
+        let t
+        document.getElementById('btn').addEventListener('click',function(){
+            clearTimeout(t)
+            t=setTimeout(()=>{
+                c++
+                console.log(`c = ${c}`)
+            },2000)
+        })
+        //debouncing on search at a delay of 1 second
+        let timer
+        document.getElementById('timer').addEventListener('input',()=>{
+            clearTimeout(timer)
+            timer = setTimeout(() => {
+                console.log('input triggered')
+            }, 1000);
+        })
+
+        //Throttle Api Call
+        let lastCall = 0
+        document.getElementById('timer').addEventListener('input',async(e)=>{
+            let value = e.target.value
+            let now = Date.now()
+            if(now-lastCall<2000) {
+                return
+            }
+            lastCall = now
+            let res = await fetch(`https://jsonplaceholder.typicode.com/users?name_like=${value}`)
+            let data = await res.json()
+            console.log(data)
+        })
+    </script>
+</body>
+</html>

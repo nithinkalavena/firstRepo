@@ -1,0 +1,28 @@
+.container{
+        background: lightgrey;
+        border-radius: 10px;
+        display: grid;    
+        gap: 10px;    
+    }
+    .section{
+        border: 1px solid black;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #item1,#item4-a{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;        
+    }
+    .box{
+        border: 0px;
+    }
+    #item4,#item5,#item6{        
+        width: 350px;
+        height: 200px;
+    }
+    #item1,#item2,#item3,#item7{
+        height: 35px;
+    }

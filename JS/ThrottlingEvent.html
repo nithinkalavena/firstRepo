@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Throttle API Call</h2>
+    <input type="text" id="search" placeholder="Search user...">
+    <script>
+        let lastCall = 0
+        document.getElementById('search').addEventListener('input',async (e)=>{
+            let value = e.target.value
+            let now = Date.now()
+            if(now-lastCall < 2000) return
+            lastCall = now
+            let response = await fetch(`https://jsonplaceholder.typicode.com/users?name_like=${value}`)
+            let data = await response.json()
+            console.log(data)
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object destructuring
+        let person = {
+            name:'nithin',
+            age:22,
+            city:'Hyderabad'
+        }
+        let {name,age,city} = person
+        console.log(name)
+        console.log(age)
+        console.log(city)
+        //Array desttucturing
+        let arr = [10,20,30]
+        let [a,b,c] = arr
+        console.log(a)
+        console.log(b)
+        console.log(c)         
+        // Error handling
+        // error handling is used to catch and manage errors in your code so the program doesn't crash
+        try{
+            let result = 10/0
+            console.log(result)
+        }catch(err){
+            console.log(
+                console.log('error occured',err.message )
+            )
+        }
+        // try {
+        //     console.log(ab)
+        // } catch (error) {
+        //     console.log(error)
+        // }
+        // throw new error
+        function chechAge(age){
+            if(age<18)
+                throw new Error('Not eligible')   
+            return 'eligible'
+        }
+        try{
+            console.log(chechAge(15))
+        }
+        catch(err){
+            console.log(err.message)
+        }
+        function divide(a,b){
+            try{
+                if(b===0){
+                    throw new Error('cannot divide by zero')
+                }
+                return a/b
+            }
+            catch(err){
+                return err.message
+            }
+        }
+        console.log(divide(10,0))
+        // Syntax error: mistake in code structure
+        // type error: Operation on wrong data type
+        // reference error: accessing a variable that is not defined        
+    </script>
+</body>
+</html>

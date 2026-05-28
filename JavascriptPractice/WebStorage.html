@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // web storage allows browsers to store data on the client side(in the browser)
+        // LocalStorage : stores data paramanently unless u delete it manually or clear browser data
+        // localStorage.setItem('name','nithin')
+        // console.log(localStorage.getItem('name'))
+        // console.log(localStorage.removeItem('name'))
+        //Session storage: stores data only for a session(tab life)
+        //output methods
+        // innerHTML
+        // textContent
+        // innerText
+        // document.write()
+        // console.log()
+        // alert()
+        // prompt
+
+        // BrowserObjetModel
+        // console.log(window.innerWidth)
+        //history
+        //navigator
+        // console.log(navigator.language)
+        // screen
+        // location
+        //common methods ----
+        // parseInt : converts a value into an integer
+        let num = parseInt('43')
+        console.log(num)
+        // parseFloat()
+        // JSON.stringify()
+        let user = {
+            name:'nithin',
+            age:22
+        }
+        console.log(JSON.stringify(user)) //json object to json string
+        // JSON.parse()
+        let data = '{"name":"Nithin","age":22}'
+        console.log(JSON.parse(data)) //json string to json object
+        // toString()
+        console.log((10).toString())
+        // toFixed()
+        let num2 = 12.3456
+        console.log(num2.toFixed(2))
+    </script>
+</body>
+</html>

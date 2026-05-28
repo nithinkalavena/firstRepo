@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Listing</title>
+    <link rel="stylesheet" href="./ProductListing.css">
+</head>
+<body>
+    <header>
+        <h2>shopEasy</h2>
+        <div><i class="fa-solid fa-cart-shopping"></i>&#128722;cart</div>
+    </header>
+    <button class="toggle-btn" onclick="toggleSideBar()">Filters</button>
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <h3>filters</h3>
+            <h4>Price Range</h4>
+            <input type="range" min="0" max="1000">
+            <h4>Category</h4>
+            <label for=""><input type="checkbox">Electonics</label><br>
+            <label for=""><input type="checkbox">Clothing</label><br>
+            <label for=""><input type="checkbox">Shoes</label>
+            <h4>Rating</h4>
+            <select name="" id="">
+                <option value="">4 & above</option>
+                <option value="">3 & above</option>
+                <option value="">2 & above</option>
+            </select>
+        </aside>
+
+        <main class="products">
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 1</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 2</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 3</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 4</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 5</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 6</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 7</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+            <div class="product">
+                <img src="https://via.placeholder.com/200" alt="">
+                <h4>product 8</h4>
+                <p>$120</p>
+                <button>Add to cart</button>
+            </div>
+        </main>
+    </div>
+    <script>
+        function toggleSideBar(){
+            document.getElementById('sidebar').classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

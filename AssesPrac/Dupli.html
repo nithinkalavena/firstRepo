@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="text" onclick="change()">Nithin</button>
+    <script>
+        function change(){
+            let str = 'Nithin'.toLowerCase()
+            let result = ''
+            for(let i=0; i<str.length; i++){
+                isFound = false
+                for(let j=0; j<i; j++){
+                    if(str[i]==str[j]){
+                        isFound = true
+                        break
+                    }
+                }
+                if(!isFound)
+                    result+=str[i]
+            }
+            document.getElementById('text').textContent = result
+        }  
+        let a = 'listen'      
+        let b = 'silent'
+        let isAllCharPrsnt = true
+        for(let i=0; i<a.length; i++){
+            let s1CharPrsnt = false
+            for(let j=0; j<a.length; j++){
+                if(a[i]==b[j]){
+                    s1CharPrsnt = true
+                    break
+                }
+            }
+            let s2Charprsnt = false
+            for(let k=0; k<b.length; k++){
+                if(b[i]==a[k]){
+                    s2Charprsnt = true
+                    break
+                }
+            }
+            if(!s1CharPrsnt||!s2Charprsnt){
+                isAllCharPrsnt = false
+                break
+            }
+        }
+        if(isAllCharPrsnt && a.length == b.length){
+            console.log(a,'is a anagram')
+        }
+        else{
+            console.log(b,' is not a anagram')
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="randomNum()">Click</button>
+    <h3>Number: <span id="dis"></span></h3>
+    <script>
+
+        let number        
+        function randomNum(){
+            number = Math.random()*100
+            let n2 = Math.round(number)          
+            document.getElementById('dis').textContent=n2
+        }
+        randomNum()
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">DOM practice</h1>
+    <input type="text" id="inputbox" placeholder="enter item">
+    <button id="addBtn">Add Item</button>
+    <button id="removeB">Remove Last</button>
+    <ul id="list"></ul>
+    <script>
+        let input = document.getElementById('inputbox')
+        let addBtn = document.getElementById('addBtn')
+        let removeBtn = document.getElementById('removeB')
+        let list = document.querySelector('#list')
+
+        document.title = 'DOM Demo'
+        console.log(document.body)
+        addBtn.addEventListener('click',()=>{
+            let value = input.value
+            let li = document.createElement('li')            
+            li.textContent = value
+            list.appendChild(li)
+            input.value = ''
+        })
+        removeBtn.addEventListener('click',()=>{
+            if(list.lastElementChild)
+                list.removeChild(list.lastElementChild)
+        })
+        list.addEventListener('click',(e)=>{
+            if(e.target.tagName === 'LI')
+                console.log('clicked',e.target.textContent)
+            console.log('parent',e.target.parentElement)
+            console.log('next:',e.target.nextElementSibling)
+            console.log('previous:',e.target.previousElementSibling)
+        })
+        list.addEventListener('dblclick',(e)=>{
+            let newLi = document.createElement('li')
+            newLi.textContent = 'replaced item'
+            e.target.replaceWith(newLi)
+        })
+        
+    </script>
+</body>
+</html>

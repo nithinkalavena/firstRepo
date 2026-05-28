@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+        }
+        #container{
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding:15px 20px;
+        }
+        #nav{        
+            display: flex;
+            gap: 100px;            
+            list-style: none;
+        }
+        #nav a{
+            text-decoration: none;
+            color: white;
+            transition: 0.3s;
+        }
+        #login:hover{
+            background-color: #e68900;            
+        }
+        #login{
+            background-color: #ff9800;
+            padding: 8px 15px;
+            color: white;            
+            border: 0;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        #hamburger{
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        #hamburger span{
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+            border-radius: 2px;
+            display: block;
+            transition: 0.3s;
+        }
+        #hamburger.active span:nth-child(1){
+            transform: rotate(45deg) translate(5px,5px);
+        }
+        #hamburger.active span:nth-child(2){
+            opacity: 0;
+        }
+        #hamburger.active span:nth-child(3){
+            transform: rotate(-45deg) translate(5px,-5px);
+        }
+        @media (max-width:768px) and (orientation: portrait) {
+            #nav{
+                position: absolute;
+                top: 60px;
+                left: 0;
+                display: none;
+                width: 100%;
+                /* background-color: #333;*/
+                flex-direction: column;                
+                text-align: center;
+                gap: 10px;                
+            }
+            #nav.active{
+                display: flex;   
+                transition: 0.3s;             
+            }
+            li{
+                background-color: #333;     
+                border: pink solid 2px;                          
+            }
+            #hamburger{
+                display: block;
+            }
+            #login{
+                display: none;
+            }                        
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="logo">
+            ShopEasy
+        </div>
+        <div id="nav">
+            <a href="#"><li>Home</li></a>
+            <a href="#"><li>Services</li></a>
+            <a href="#"><li>About</li></a>
+            <a href="#"><li>Contact</li></a>
+        </div>
+        <button id="login">Login</button>
+        <div id="hamburger" onclick="a()">
+            <span></span><span></span><span></span>
+        </div>
+    </div>
+    <script>
+        function a(){
+            document.getElementById('nav').classList.toggle('active')
+            document.getElementById('hamburger').classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

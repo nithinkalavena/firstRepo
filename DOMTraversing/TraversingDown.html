@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="parent">
+        <p>Child1</p>
+        <!-- <h2>Hello</h2> -->
+        <p>Child2</p>
+    </div>
+    <!-- //DownTraversing:- Accessing child elements from a parent -->
+    <script>
+        let parent = document.getElementById('parent')
+        console.log(parent)
+        console.log(parent.children)
+        console.log(parent.firstElementChild)
+        console.log(parent.lastElementChild)
+    </script>
+</body>
+</html>

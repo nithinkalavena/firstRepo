@@ -1,0 +1,23 @@
+.container{
+        display: grid;
+        background:grey;
+        gap: 10px;
+        grid-template-columns: repeat(3,1fr);      
+        grid-template-rows: 30px 40px 40px 100px 30px;
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+    }
+    .section{
+        border: 1px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+    }
+    #item5{
+        grid-column: 2/-1;
+    }
+    #item1,#item2,#item3,#item6{
+        grid-column: 1/-1;
+    }

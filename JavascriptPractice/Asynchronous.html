@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Asynchronous JS means : code that runs without blocking the main thread -->
+    <!-- CallBack is a function passed as an argument to another function -->
+    <!-- Promise is an object that represents future completion (success/failure) -->
+    <script>
+        console.log('start')
+        setTimeout(() => {
+            console.log('async task')
+        },10);
+        console.log('end')
+
+        //CallBack
+        function greet(name,callBack){
+            console.log('hello',name)
+            callBack()
+        }
+        function bye(){
+            console.log('bye!')
+        }
+        greet('nithin',bye)
+
+        let promise = new Promise((resolve,reject)=>{
+            let success = false
+            if(success)
+                resolve('success!')
+            else
+                reject('Error')
+        })
+        promise
+        .then(res=>console.log(res))
+        .catch(err=>console.log(err))
+
+        async function  getData() {
+            try{
+                let res = await fetch('https://jsonplaceholder.typicode.com/users')
+                let data = await res.json()
+                console.log(data)
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        getData()
+    </script>
+</body>
+</html>

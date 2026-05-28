@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">Click</button>
+    <span id="res"></span>
+    <script>
+        //Normal Event
+        let a = 0
+        let b = 0
+        let c = 0
+        document.getElementById('btn').addEventListener('click',function(){
+            a++
+            console.log(`a = ${a}`)
+        })
+
+        //Throttling
+        let lastClick = 0
+        document.getElementById('btn').addEventListener('click',function(){
+            let current = Date.now()
+            if(current-lastClick>2000){
+                b++
+                console.log(`b = ${b}`)
+                lastClick = current
+            }            
+        })   
+        
+        //debouncing
+        let t
+        document.getElementById('btn').addEventListener('click',function(){
+            clearTimeout(t)
+            t=setTimeout(()=>{
+                c++
+                console.log(`c = ${c}`)
+            },2000)
+        })
+        
+        let p = new Promise((resolved,rejected)=>{
+            let status = true
+            if(status)
+            resolved('function successful')
+            else
+            rejected('function unsuccessful')
+        })
+
+        console.log(p)
+        // p.then(d=>console.log(d))
+
+        function one(){
+            return new Promise((resolve)=>{
+                setTimeout(() => { 
+                    resolve('done')
+                    // console.log('resolved')
+                }, 2000);
+            })
+        }
+
+        //type-1 calling using .then
+        one().then(res=>console.log(res))
+        // console.log(one())
+
+        //tppe-2 calling using async and await
+        async function run() {
+            let res = await one()
+            console.log(res)
+        }
+        run()        
+    </script>
+</body>
+</html>

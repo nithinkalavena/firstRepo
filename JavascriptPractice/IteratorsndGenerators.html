@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- An iterator is an object that allows you to traverse elements one by one -->
+    
+    <script>
+        // <!-- Manual iterator -->
+        function createIterator(arr){
+            let index = 0
+            return{
+                next:function(){
+                    if(index < arr.length)
+                        return{value:arr[index++],done:false}
+                    else
+                        return{value:undefined,done:true}
+                }
+            }
+        }
+
+        let numbers = [10,20,30]
+        let iterator = createIterator(numbers)
+        console.log(iterator.next())
+        console.log(iterator.next())
+        console.log(iterator.next())
+        console.log(iterator.next())
+
+        // Built-in iterator
+        let arr = [3,4,2]
+        let itr = arr[Symbol.iterator]()
+        console.log(itr.next())
+        console.log(itr.next())
+        console.log(itr.next())
+        console.log(itr.next())
+
+        // Generators : a generator is a special function that can 
+        // pause execution using yield and resume later from where it stopped
+        function* generatorFun(){
+            yield 1
+            yield 2
+            yield 3
+        }   
+        let gen = generatorFun()
+        console.log(gen.next())
+        console.log(gen.next())
+        console.log(gen.next())
+        console.log(gen.next())
+
+        // generator with loop
+        function* countUp(n){
+            for(let i=0; i<n; i++)
+                yield i
+        }
+        let counter = countUp(3)
+        console.log(counter.next())
+        console.log(counter.next())
+        console.log(counter.next())
+        console.log(counter.next())
+
+        function* colors(){
+            yield 'red'
+            yield 'green'
+            yield 'blue'
+        }
+        for(let color of colors()) 
+            console.log(color)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Map: is a collection of key-value pairs where key can be any data type
+        // maintains insertion order
+        let map = new Map()
+        map.set('name','Nithin')
+        map.set(1,'number key')
+        console.log(map.get('name'))
+        console.log(map.has(1))
+        for(let [key,value] of map)
+            console.log(key,value)
+        // Set : is a collection of unique values
+        let set = new Set()
+        set.add(1)
+        set.add(2)
+        set.add(3)
+        console.log(set)
+
+        let arr = [1,2,2,3]
+        let unique = [...new Set(arr)]
+        console.log(unique)
+        //Weak map: is similar to map but keys must be objects only 
+        // keys are weakly referenced (can be garbage collected)
+        let weakMap = new WeakMap()
+        let obj = {}
+        weakMap.set(obj,'data')
+        console.log(weakMap.get(obj))
+        //WeakSet: stores only objects
+        // keeps weak references
+        let weakSet = new WeakSet()
+        let obj1 = {}
+        let obj2 = {}
+        weakSet.add(obj1)
+        weakSet.add(obj2)
+        console.log(weakSet.has(obj1))
+    </script>
+</body>
+</html>
