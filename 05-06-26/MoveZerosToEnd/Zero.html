@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,0,2,0,3,0,4]
+        let result = []
+        for(let i=0; i<arr.length; i++){
+            if(arr[i] !== 0){
+                result[result.length] = arr[i]
+            }
+        }
+        for(let i=0; i<arr.length; i++){
+            if(arr[i] === 0){
+                result[result.length] = arr[i]
+            }
+        }
+        console.log('moving the zero to the end in an array',result)
+    </script>
+</body>
+</html>

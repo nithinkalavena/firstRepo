@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Iterating means visiting each element of an array one by one and performing some operation on it. -->
+    <script>
+        let fruits = ['apple','banana','mango']
+        for(let fruit of fruits)
+            console.log(fruit)
+        //the for-of loop directly gives you each element of the array
+        //usage: when you only need the values and don't care about the index
+        //Examples for iterable's: Array, String, Set, Map, NodeList
+        //Examples for Non-iterable's: Object(for this object's we are using forIn Loop)
+
+        let fruits2 = ['apple','banana','mango']
+        fruits2.forEach(function (item){
+            console.log(item)
+        })
+        //forEach is an array method that executes a function for every element in the array
+    </script>
+</body>
+</html>

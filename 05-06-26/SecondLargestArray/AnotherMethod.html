@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [10,25,40,15,35]
+        let largest,second
+        if(arr[0]>arr[1]){
+            largest = arr[0]
+            second = arr[1]
+        }else{
+            largest = arr[1]
+            second = arr[0]
+        }
+        for(let i=2; i<arr.length; i++){
+            if(arr[i]>largest){
+                second = largest
+                largest = arr[i]
+            }
+            else if(arr[i]>second){
+                second = arr[i]
+            }
+        }
+        console.log('second largest number is',second)
+    </script>
+</body>
+</html>

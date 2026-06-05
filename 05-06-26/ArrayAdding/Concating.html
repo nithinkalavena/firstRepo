@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //using concat method
+        let arr1 = [1,2,3]
+        let arr2 = [4,5,6]
+        let result = arr1.concat(arr2)
+        console.log('Adding by concating',result)
+
+        //using spread operator
+        //spread operator is used to expand the elements in it
+        let arr3 = [1,2,3]
+        let arr4 = [4,5,6]
+        let result2 = [...arr3,...arr4]
+        console.log('Adding by using spread operator',result2)
+
+        //copying array using spread operator
+        let original = [10,20,30]
+        let copy = [...original]
+        console.log('copying by using rest operator     ',copy)
+    </script>
+</body>
+</html>
