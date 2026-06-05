@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" placeholder="enter a string" id="text">
+    <button onclick="check()">Check</button><br><br>
+    <span id="out"></span>
+    <script>        
+        function check(){
+            let str = document.getElementById('text').value.toLowerCase()
+            let reverse = ''
+            for(let i=str.length-1; i>=0; i--){
+                reverse+=str[i]
+            }
+            if(str === reverse){
+                document.getElementById('out').textContent = 'Given string is a Pallindrome'
+                document.getElementById('out').style.color = 'blue'
+            }
+            else{
+                document.getElementById('out').textContent = 'Given string is not a Pallindrome'
+                document.getElementById('out').style.color = 'red'
+            }
+        }            
+    // check('nithin')
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = 'Racecar'
+        for(let i=0; i<str.length; i++){
+            let count = 0
+            for(let j=0; j<str.length; j++){
+                if(str[i]==str[j]){
+                    count++
+                }
+            }
+            let isVisited = false
+            for(let k=0; k<i; k++){
+                if(str[i]===str[k]){
+                    isVisited = true
+                    break
+                }
+            }
+            if(count>1 && !isVisited)
+                console.log(str[i],'repeated',count,'times')
+        }
+    </script>
+</body>
+</html>
