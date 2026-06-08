@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Converts iterable or array-like objects into arrays -->
+    <!-- String to array -->
+    <script>
+        let str = 'HELLO'
+        let arr = Array.from(str)
+        console.log(arr)
+        // Geneerate Seat numbers
+        let seats = Array.from(
+            {length:10},
+            (_,i)=>`Seats-${i+1}`
+        )
+        console.log(seats)
+    </script>
+</body>
+</html>

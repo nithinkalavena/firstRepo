@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Reduces all elements into a single value -->
+     <script>
+        let numbers = [10,20,30,40]
+        let sum = numbers.reduce((total,sum) => total+sum, 0)
+        console.log(sum)
+
+        //Finding largest number
+        let num = [10,50,20,80,30]
+        let max = num.reduce((largest,num)=>(
+            num > largest ? num : largest
+        ))
+        console.log(max)
+     </script>
+</body>
+</html>

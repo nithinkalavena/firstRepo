@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let products = [
+            {name:'Laptop',price:50000},
+            {name:'Mouse',price:500},
+            {name:'Keyboard',price:1500},
+            {name:'Monitor',price:12000}
+        ]
+        //Products above 1000
+        let expensive = products.filter(p=> p.price > 1000)
+        //product names only
+        let names = expensive.map(p=> p.name)
+        //Alphabetical order
+        names.sort()
+        //Display as string
+        let result = names.join(',')
+
+        console.log(result) //Keyboard, Laptop, Monitor
+        //Total amount
+        let total = products.reduce((sum,p)=> sum+p.price, 0)
+        console.log('Total Amount:',total) //64000
+    </script>
+</body>
+</html>

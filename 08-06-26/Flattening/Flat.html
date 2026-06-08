@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Flattening means converting a nested array into a single array -->
+     <script>
+        let arr = [1,2,[3,4],[5,6]]
+        let result = arr.flat()
+        console.log(result)
+        //Multiple Levels
+        let arr1 = [1,[2,[3,[4]]]]
+        console.log(arr1.flat(2))
+        //Completey Flatten
+        let arr2 = [1,[2,[3,[4]]]]
+        console.log(arr2.flat(Infinity))
+     </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- The main difference of the map() and forEach() is map() returns new array whereas the forEach() is not -->
+     <script>
+        let nums = [1,2,3]
+        let doubled = nums.map(num => num * 2)
+        console.log(doubled) //[2,4,6]
+        let num = [1,2,3]
+        num.forEach(num => (
+            console.log(num*2)
+        ))
+     </script>
+</body>
+</html>
