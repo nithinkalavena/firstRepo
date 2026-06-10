@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="out"></div>
+    <!-- Default parameters allows us to assign a default value to a parameter if no argument is provided -->
+    <script>
+
+        function greet(name='Nithin'){
+            document.getElementById('out').textContent='Hi '+name
+            console.log('Hi',name)
+        }
+        greet()
+
+        // Arguments have higher priority than default parameters
+        // if an argument is not provided, then the default parameter value is used
+
+    </script>
+</body>
+</html>

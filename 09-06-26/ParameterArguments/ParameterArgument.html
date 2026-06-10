@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Parameter -->
+    <!-- A parameter is a variable listed in the function definition.
+    it acts as a placeholder to receive values -->
+    <script>
+        function Hi(name){
+            console.log('Hello',name)
+        }
+        Hi('Nithin')
+    // Argument
+    // an argument is the actual value passed to the function when it is called
+    function add(a,b){ //a and b are parameters
+        return a+b
+    }
+    var res = add(10,20) //10 and 20 are arguments
+    console.log(res)
+    
+    function orderFood(item){
+        console.log('you ordered',item)
+    }
+    orderFood('pizza')
+    function student(name,age){
+        console.log(name,'is',age,'years old')
+    }
+    student('nithin',20)
+    </script>
+</body>
+</html>
