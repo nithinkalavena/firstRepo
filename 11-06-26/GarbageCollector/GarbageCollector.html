@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Garbage collection is the automatic process in javascript that removes unused memory to freeup space. -->
+    <script>
+        function createUser(){
+            let user = {
+                name:'Nithin'
+            }
+        }
+        createUser()
+        // After the function finishes, user is no longer accessible
+        // garbage collector will eventually remove it from memory
+    </script>
+</body>
+</html>

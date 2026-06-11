@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- copying means creating a duplicate object -->
+    <!-- using spread operator -->
+    <script>
+        let emp = {
+            name:'Nithin',
+            sal:20000
+        }
+        let copy = {...emp}
+        console.log('copying using spread operator',copy)
+        //object.assign()
+        let copy2 = Object.assign({},emp)
+        console.log('copying using assign method',copy2)
+        //manual copy
+        let copy3 = {}
+        for(let key in emp){
+            copy3[key] = emp[key]
+        }
+        console.log('Manual key',copy3)
+
+        // creating a backup profile before updating
+        let user = {
+            name:'Nithin',
+            email:'nithin@gmail.com'
+        }
+        let backup = {...user}
+        user.name = 'Nithin K'
+        console.log(user)
+        console.log(backup)
+    </script>
+</body>
+</html>

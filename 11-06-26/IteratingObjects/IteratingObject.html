@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Object  iteration means accessing all properties (keys and values) of an object -->
+    <script>
+        //example
+        let employee = {
+            id:101,
+            name:'Nithin',
+            dept:'IT',
+            salary:50000
+        }
+        //for-in loop
+        // used to iterate through object keys
+        for(let key in employee){
+            console.log(key,employee[key])
+        }
+
+        // realtime example
+        let student = {
+            name:'Nithin',
+            course:'Java Full Stack',
+            city:'Hyderabad'
+        }
+        for(let key in student){
+            console.log(`${key}: ${student[key]}`)
+        }
+
+        // object.keys()
+        // Return an aray of all keys
+        console.log(Object.keys(employee))
+        // object.values()
+        // return an array of values
+        console.log(Object.values(employee))
+        // object.entries()
+        // return key-value pairs as arrays
+        console.log(Object.entries(employee))
+        //for-of
+        for(let [key,value] of Object.entries(employee)){
+            console.log(key,value)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Traversing means moving between parent, child and sibling elements -->
+    <div id="parent">
+        <h1>Heading</h1>
+        <p>Paragraph</p>
+    </div>
+    <script>
+        let child = document.querySelector('p')
+        console.log(child.parentElement)
+        let parent = document.getElementById('parent')
+        console.log(parent.children)
+        //firstChild
+        console.log(parent.firstElementChild)
+        console.log(parent.lastElementChild)
+        //nextSibling
+        let heading = document.querySelector('h1')
+        console.log(heading.nextElementSibling)
+        //previousSibling
+        let para = document.querySelector('p')
+        console.log(para.previousElementSibling)
+        //AddingElement
+        let newPara = document.createElement('h1')
+        newPara.innerText = 'New Paragraph'
+        //appendChild
+        document.body.appendChild(newPara)
+        //append
+        let div = document.getElementById('container')
+        div.append('Hello')
+        
+    </script>
+</body>
+</html>
