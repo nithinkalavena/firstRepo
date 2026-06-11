@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- call() and apply() executes the function immediately by setting this, while bind()
+    returns a new function with this permanently bound and executes only when called later -->
+    <script>
+        //Default binding
+        function greet(){
+            console.log(this)
+        }
+        greet()
+
+        //implicit binding
+        let user = {
+            name:'Nithin',
+            show(){
+                console.log(this.name)
+            }
+        }
+        user.show()
+    </script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Scope determines where variables can be accessed in a program -->
+    <script>
+        //Type of scope's
+        //Global scope
+        let name = 'Nithin'
+        function show(){
+            console.log(name)
+        }
+        show()
+        //Accessible everywhere
+
+        //Function scope
+        function demo(){
+            let age = 25
+            var a=10
+            console.log(age)
+        }
+        demo()
+        //console.log(a) //error
+        //console.log(age) //Error
+        //Accessible only inside the function
+
+        //Block-scope
+        //Variables declared using let and const are block-scoped.
+        if(true){
+            let city = 'Hyderabad'
+            console.log(city)
+        }
+        //console.log(city)//error
+    </script>
+</body>
+</html>

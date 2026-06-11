@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Does not executes immediately. it returns a new function with this permanently bound. -->
+    <script>
+        function greet(){
+            console.log(`Hello, ${this.name}`)
+        }
+        let person = {
+            name:'Nithin'
+        }
+        let sayHello = greet.bind(person)
+        sayHello()
+    </script>
+</body>
+</html>

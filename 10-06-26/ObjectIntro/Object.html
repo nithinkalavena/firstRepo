@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- An object is a non-primitive data type that stores data in the form of key-value pairs.
+    it is used to represent real-world entities and group related data and behaviour together. -->
+    <!-- keys are called properties -->
+    <!-- values can be strings, numbers, arrays, function, or even other objects -->
+    <script>
+        let person = {
+            name:'Nithin',
+            age:24,
+            city:'Hyderabad'
+        }
+        console.log(person)
+        // instead of storing related information in seperare variables, we can group them into one object
+        // this makes data easier to manage
+        // Creation of objects
+        // 2) using new 
+        let student = new Object()
+            student.name = 'Nithin',
+            student.age = 20,
+            student.course = 'javascript'
+        console.log(student)
+        
+    // 3) using constructor
+    function Student(name,age){
+        this.name = name
+        this.age = age
+    }
+    let s1 = new Student('Nithin',20)
+    console.log(s1)
+    // 4) using ES6 class
+    class Student1{
+        constructor(name,age){
+            this.name= name
+            this.age= age
+        }
+    }
+    let s2 = new Student1('Nithin',23)
+    console.log(s2)
+    </script>
+</body>
+</html>

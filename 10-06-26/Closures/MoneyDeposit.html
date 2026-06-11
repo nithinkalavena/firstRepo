@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function account(balance){
+            return {
+                deposit(amount){
+                    balance+=amount
+                    console.log('Balance deposited added to the account',amount)
+                },
+                getBalance(){
+                    console.log('Total Balance in the account',balance)
+                }
+            }
+        }
+        let bankAccount = account(1000)
+        bankAccount.deposit(500)
+        bankAccount.getBalance()
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- A dynamic object is an object whose properties can be added, updated or removed at runtime -->
+    <!-- javascript objects are dynamic by nature -->
+    <script>
+        let employee = {}
+        employee.id=101
+        employee.name='nithin'
+        employee.dept='IT'
+        console.log(employee)
+        //Using bracket notation:
+        //useful when property names are stored in variables
+        let student = {}
+        let key = 'salary'
+        student[key]=50000
+        console.log(student)
+        //Deleting properties
+        delete employee.dept
+        console.log(employee)
+        //dynamic property names(es6)
+        let property = 'deparment'
+        let employer = {
+            id:101,
+            [property]:'Testing'
+        }
+        console.log(employer)
+        //the property name is created dynamically using []
+        
+        //Dynamic objects are objects whose properties can be added, modified or deleted during 
+        //program execution without changing the original object structure.
+        
+        //javascript objects are called dynamic because their structure is not fixed and can change at runtime.
+    </script>
+</body>
+</html>

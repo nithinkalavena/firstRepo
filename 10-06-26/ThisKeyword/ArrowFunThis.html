@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Arrow functions do not have their own this -->
+     <script>
+        let person = {
+            name:'Nithin',
+            show:()=>{
+                console.log(this.name)
+            }
+        }
+        person.show()
+        //arrow functions inherit this from the surrounding scope.
+     </script>
+</body>
+</html>

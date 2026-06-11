@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Javascript move declarations to the top of their scope before execution. -->
+    <script>
+        // var hoisting
+        console.log(a)
+        var a
+        //let and const hoisting
+        console.log(b)        
+        let b = 20 //they are hoisted but stay in the temporal dead zone (tdz) until initilized
+        
+    </script>
+</body>
+</html>

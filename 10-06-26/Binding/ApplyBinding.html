@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- invokes the function immediately, but arguments are passed as an array -->
+    <script>
+        function greet(city,country){
+            console.log(`Hello, i'm ${this.name} from ${city}, ${country}`)
+        }
+        let person = {
+            name:'Nithin'
+        }
+        greet.apply(person,['Hyderabad','India'])
+    </script>
+</body>
+</html>

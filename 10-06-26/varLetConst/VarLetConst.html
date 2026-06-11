@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border: 2px solid black;
+            border-collapse: collapse;
+            
+        }
+        th,td{
+            border: 2px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+            <th>Features</th>
+            <th>Var</th>
+            <th>let</th>
+            <th>const</th>
+            </tr>        
+        </thead>
+        <tbody>
+            <tr>
+                <th>Scope</th>
+                <td>Function</td>
+                <td>Block</td>
+                <td>Block</td>
+            </tr>
+            <tr>
+                <th>Redeclare</th>
+                <td>Yes</td>
+                <td>No</td>
+                <td>No</td>
+            </tr>
+            <tr>
+                <th>Reassign</th>
+                <td>Yes</td>
+                <td>Yes</td>                
+                <td>No</td>
+            </tr>
+            <tr>
+                <th>Hoisted</th>
+                <td>Yes</td>
+                <td>TDZ</td>
+                <td>TDZ</td>                
+            </tr>
+            <tr>
+                <th>Preferred</th>
+                <td>Rarely</td>
+                <td>Usually</td>
+                <td>For constants</td>
+            </tr>
+        </tbody>
+    </table>       
+</body>
+</html>
