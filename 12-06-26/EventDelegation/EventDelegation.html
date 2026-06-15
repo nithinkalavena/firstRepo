@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Event delegation is a technique where a parent element handles events for its child elements
+    using event bubbling -->
+    <!-- instead of adding event listeners to multiple cild elements, add a single listener to the parent -->
+    <ul id="list">
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>Orange</li>
+    </ul>
+    <script>
+        document.getElementById('list').addEventListener('click',function(e){
+            console.log(e.target.textContent)
+        })
+    </script>
+</body>
+</html>

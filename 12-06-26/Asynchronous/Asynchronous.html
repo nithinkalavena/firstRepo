@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Javascript is single-threaded meaning it executes one task at a time. however, it can handle
+    long-running operations(API calls,timers,file reading) asynchronously without blocking the main thread. -->
+    <script>
+        console.log('Start')
+        console.log('Middle')
+        console.log('End')
+
+        console.log('Start')
+        setTimeout(() => {
+            console.log('Inside timer')
+        }, 200);
+        console.log('End')
+    </script>
+</body>
+</html>

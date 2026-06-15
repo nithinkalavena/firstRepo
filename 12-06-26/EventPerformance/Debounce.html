@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Debounce is a technique used to delay the execution of a function until a certain amount of time
+    has passed since the last event occurred -->
+    <input type="text" id="inp">
+    <script>
+        let t
+        function Deboune(){
+            clearTimeout(t)
+            t=setTimeout(()=>{
+                console.log('input triggered')
+            },500)
+        }
+        document.getElementById('inp').addEventListener('keyup',Deboune)
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Event capturing is the opposite of bubbling -->
+    <!-- The event starts from the outermost element and travels down to the target element -->
+    <div id="parent">
+        <button id="child">Click Me</button>
+    </div>
+    <script>
+        document.getElementById('parent').addEventListener('click',()=>{
+            console.log('Parent clicked')
+        },true)
+        document.getElementById('child').addEventListener('click',()=>{
+            console.log('child clicked')
+        },true)
+    </script>
+    <!-- Why use capturing? -->
+    <!-- Used when parent element need to handle events before child elements -->
+</body>
+</html>

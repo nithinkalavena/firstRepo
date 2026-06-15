@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- When multiple callbacks are nested inside each other -->
+    <script>
+        function login(callback){
+            setTimeout(() => {
+                console.log('Login successfull')
+                callback()
+            }, 100);            
+        }
+        function getUser(callback){
+            setTimeout(() => {
+                console.log('User Details Fetched')
+                callback()
+            }, 200);            
+        }
+        function getOrders(callback){
+            setTimeout(() => {
+                console.log('Orders fetched')
+                callback()
+            }, 300);            
+        }
+        function makePayments(callback){
+            setTimeout(()=>{
+                console.log('Payment successful')
+                callback()
+            },400)            
+        }
+        login(function(){
+            getUser(function(){
+                getOrders(function(){
+                    makePayments(function(){
+                        console.log('Done')
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+</html>

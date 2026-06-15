@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Throttling limits how often a function executes within a specidied time intervel -->
+    <button id="btn">Click</button>
+    <script>
+        let canClick = true
+        document.getElementById('btn').addEventListener('click',()=>{
+            if(canClick){
+                console.log('Payment processing...')
+                canClick = false
+                setTimeout(()=>{
+                    canClick = true
+                },2000)
+            }
+        })
+    </script>
+</body>
+</html>
