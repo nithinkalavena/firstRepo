@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Currying transforms a function with multiple parameters into a sequence of functions
+    each taking one parameter -->
+    <!-- Normal -->
+    <script>
+        function add(a,b){
+            return a+b
+        }
+        console.log(add(10,20))
+        // Curried function
+        function add2(a){
+            return function (b){
+                return a+b
+            }
+        }
+        console.log(add2(10)(70))
+        // Arrow function
+        let add3 = a=> b=> a+b
+        console.log(add3(10)(30))
+    </script>
+</body>
+</html>

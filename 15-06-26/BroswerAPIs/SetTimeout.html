@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Browser apis are built in features provided by the browser. -->
+    <script>
+        // settimeout
+        // executes a function once after a specified delay
+        setTimeout(() => {
+            console.log('This is setTimeout')
+        }, 200);
+        //Cleartimeout
+        //cancels a timeout before it executes
+        let id = setTimeout(() => {
+            console.log('Hello')
+        }, 200);
+        clearTimeout(id) //No output
+        //setinterval
+        // executes a function repeatedly after a fixed interval
+        setInterval(() => {
+            console.log('Running...')
+        }, 900);
+        // clearinterval
+        // stops an inerval
+        let inter = setInterval(() => {
+            console.log('Hello')
+        }, 1000);
+        setTimeout(()=>{
+            clearInterval(inter)
+        },800)
+    </script>
+</body>
+</html>

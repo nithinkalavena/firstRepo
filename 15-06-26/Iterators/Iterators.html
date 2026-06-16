@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- An iterator is an object that allows you to traverse elements one by one -->
+    <!-- returns true if iteration is complete otherwise false -->
+    <script>
+    let arr = ['HTML','CSS','Javascript']
+    let iterator = arr[Symbol.iterator]()
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+    console.log(iterator.next())
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a function can be assigned to variable
+    passed as an argument
+    returned from another function -->
+    <script>
+        let greet = function(){
+            console.log('Hello')
+        }
+        greet()
+        // passing function as argument
+        function display(fn){
+            fn()
+        }
+        display(function(){
+            console.log('Welcome')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- recurson is a technique where a function calls itself until a condition is met. -->
+    <script>
+        function resursion(n){
+            if(n===0) return
+            console.log(n)
+            resursion(n-1)
+        }
+        resursion(5)
+        // factorial
+        function fact(n){
+            if(n===1) return 1
+            return n * fact(n-1)
+        }
+        console.log(fact(5))
+    </script>
+</body>
+</html>
