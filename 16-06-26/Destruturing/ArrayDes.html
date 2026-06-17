@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Array Destructuring extracts values from an array and assigns them to variables
+    based on their position -->
+    <script>
+        let colors = ['Red','Green','Blue']
+        let [first,second, third] = colors
+        console.log(first)
+        console.log(third)
+
+        // Default values
+        let num = [10]
+        let [a,b=20] = num
+        console.log(b)    
+        
+        // Rest opertor
+        let numbers = [1,2,3,4,5]
+        let [one,...rest] = numbers
+        console.log(one)
+        console.log(rest)
+    </script>
+    <!-- Advantages -->
+    <!-- makes code shorter and cleaner
+    useful when working with function parameters, objects and arrays -->
+    
+</body>
+</html>

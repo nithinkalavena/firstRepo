@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a weakset stores only object -->
+    <script>
+        let person = {
+            name:'Nithin'
+        }
+        let weakSet = new WeakSet()
+        weakSet.add(person)
+        console.log(weakSet.has(person))
+    </script>
+</body>
+</html>

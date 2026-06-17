@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1.syntaxError
+    a syntaxError occurs when javascript code violates language grammer rules. -->
+    <script>
+        //syntax error
+        // let x =       
+        //2) type error
+        // a type error occurs when an operation is performed on a value of the wrong type
+        // let a = 0        
+        // console.log(a.toUpperCase())
+        // 3) ReferenceError
+        // a reference error occurs when trying to access a variable that has not been declared
+        try{
+            let person = null
+            console.log(person.name)
+        }
+        catch(err){
+            console.log('Error name:',err.name)
+            console.log('Error message:',err.message)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- a weakmap is similar to a map,but the keys must be objects -->
+    <script>
+        
+        let user = {
+            name:'nithin'
+        }
+        let weakMap = new WeakMap()
+        weakMap.set(user,'userData')
+        console.log(weakMap.get(user))
+        console.log(weakMap)
+        // only objects can be keys
+        // cannot use primitive keys(string,number,boolean)
+    </script>
+</body>
+</html>

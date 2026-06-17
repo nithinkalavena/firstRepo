@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Set
+    a set is a collection of unique values. duplicate values are not allowed -->
+    <script>
+        let number = new Set()
+        number.add(10)
+        number.add(20)
+        number.add(30)
+        number.add(40)
+        number.add(40) //duplicate ignored
+        console.log(number)
+
+        let nums = [1,2,3,4,4,5,3]
+        let uniqueNums = [...new Set(nums)]
+        console.log(uniqueNums)
+    </script>
+</body>
+</html>
