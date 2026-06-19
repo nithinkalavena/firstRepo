@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- storage can only store strings.use JSON.stringify() and JSON.parse() for objects -->
+    <script>
+        let user = {
+            name:'Nithin',age:28
+        }
+        console.log(user)
+        localStorage.setItem('user',JSON.stringify(user))        
+        let data = JSON.parse(localStorage.getItem('user'))
+        console.log(data.name)
+        console.log(data.age)
+
+        //without parse or stringify()
+        let d = localStorage.getItem('user')
+        console.log(d)
+    </script>
+</body>
+</html>

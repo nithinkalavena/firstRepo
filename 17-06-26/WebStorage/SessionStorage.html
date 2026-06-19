@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- stores data only for the current browser tab/session.
+    data is deleted when the tab or browser is closed
+    different tabs have different session storage -->
+    <script>
+        sessionStorage.setItem('username','user')
+        let sessionUser = sessionStorage.getItem('username')
+        console.log(sessionUser)
+        sessionStorage.removeItem('username')
+        sessionStorage.clear()
+
+        sessionStorage.setItem('loggedIn','true')
+        console.log(sessionStorage.getItem('loggedIn'))
+    </script>
+</body>
+</html>

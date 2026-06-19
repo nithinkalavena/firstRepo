@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- web storage allows websites to store data in the browser as key-value pairs. -->
+    <!-- there are 2 types -->
+    <!-- 1) Local storage
+    2) Session storage -->
+    
+    <!-- Local storage -->
+    <!-- stores data permanently until it is manually removed -->
+    <!-- data remains even after closing and reopening the browser -->
+    <!-- shared across all tabs of the same website -->
+    <script>
+        localStorage.setItem('name','Nithin')
+        let user = localStorage.getItem('name')
+        console.log(user)
+        localStorage.removeItem('name') //remove specific item
+        localStorage.clear() //clear all items
+
+        localStorage.setItem('theme','dark')
+        let theme = localStorage.getItem('theme')
+        console.log(theme)
+        localStorage.removeItem('theme')
+    </script>
+</body>
+</html>

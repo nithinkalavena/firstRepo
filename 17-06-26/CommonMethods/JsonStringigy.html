@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- converts a javascript object into a json string -->
+    <!-- used before storing objecs in localStorage or sending data to api's -->
+    <script>
+        let user = {
+            name:'john',age:40
+        }
+        let jData = JSON.stringify(user)
+        console.log(jData)
+        console.log(typeof jData)
+        
+    </script>
+</body>
+</html>
