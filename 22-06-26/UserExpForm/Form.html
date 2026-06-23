@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Form.css">
+</head>
+<body>
+    <div id="container">
+        <h1>Welcome to Hotel Taj</h1>
+        <form action="" id="bookingForm">
+            <div class="form-group">
+                <label for="">Full Name</label>
+                <input type="text" required placeholder="Enter your name" id="name">                
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" required placeholder="abc@gmail.com" id="email">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="date">Booking date</label>
+                <input type="date" required id="date">
+            </div>
+            <div class="form-group">
+                <label for="guests">Number of guests</label>
+                <input type="number" id="guests" placeholder="Enter number of guests" min="1" required>
+            </div>
+            <button type="submit">Book now</button>
+        </form>
+    </div>
+    <script src="Form.js"></script>
+</body>
+</html>

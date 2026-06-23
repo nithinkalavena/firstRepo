@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header{
+    background: #333;
+    padding: 15px 30px;
+}
+nav{
+    display: flex;   
+    justify-content: space-between;
+    align-items: center;
+}
+nav h2{
+    color: white;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    gap: 20px;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+nav a:hover{
+    color: orange;
+}
+.hero{
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836') center/cover no-repeat;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+}
+.hero h1{
+    font-size: 3rem;
+}
+.hero button{
+    padding: 12px 25px;
+    border: none;
+    background: orange;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform;
+}
+html{
+    scroll-behavior: smooth;
+}
