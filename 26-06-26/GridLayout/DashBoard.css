@@ -1,0 +1,26 @@
+.container{
+    display: grid;
+    grid-template-columns: 220px repeat(4,1fr);
+    grid-template-rows: 70px 150px 300px 70px;
+    gap: 10px;
+}
+header{
+    grid-column: 1/-1;
+    background: orange;
+}
+aside{
+    grid-row: 2/4;
+    background: gray;
+}
+.card{
+    background: skyblue;
+}
+main{
+    grid-column: 2/-1;
+    background: lawngreen;
+}
+footer{
+    grid-column: 1/-1;
+    background: black;
+    color: white;
+}
