@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Important-property</title>
+    <style>
+        .btn{
+            background: green;
+        }
+        button{
+            background: blue !important;
+        }
+        #c{
+            background: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <!-- the button background is green because the !important declaration takes procedence -->
+    <button class="btn" id="c">Submit</button>
+</body>
+</html>
