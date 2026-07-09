@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import One from './Practice2/08-07-26/DataBinding/TwoWay'
+import One from './Practice2/09-07-26/LifeCycleMethods/Parent'
 import { Provider } from 'react-redux'
 import store from './Practice2/06-07-26/ReduxCounter/App'
 
