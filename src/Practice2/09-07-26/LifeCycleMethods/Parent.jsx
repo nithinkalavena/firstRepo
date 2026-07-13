@@ -22,7 +22,7 @@ function Child(){
     )
 }
 function Parent(){
-    let [show,setShow] = useState(true)
+    let [show,setShow] = useState(false)
     return(
         <div style={{padding:'20px'}}>
             <h1>React functional lifecycle example</h1>
