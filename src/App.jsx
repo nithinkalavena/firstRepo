@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Provider } from 'react-redux'
 import store from './Practice2/06-07-26/ReduxCounter/App'
-import One from './Practice2/17-07-26/UseRef/StateVsUseRef'
+import One from './Practice2/20-07-26/Styling/Example1'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,6 +10,7 @@ function App() {
     <>
     {/* <Provider store={store}> */}
     <One/>
+  
     {/* </Provider> */}
     </> 
   )
