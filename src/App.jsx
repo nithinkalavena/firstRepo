@@ -2,7 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Provider } from 'react-redux'
 import store from './Practice2/06-07-26/ReduxCounter/App'
-import One from './Practice2/24-07-26ReactFiber//Notifications'
+import One from './Practice2/27-07-26WebPack/Todo/App'
 import { BrowserRouter } from 'react-router-dom'
 
 function App() {

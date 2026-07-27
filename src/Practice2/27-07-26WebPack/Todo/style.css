@@ -1,0 +1,26 @@
+body {
+  font-family: Arial;
+}
+
+.container {
+  width: 400px;
+  margin: 40px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+.container:hover{
+    background-color: lightgrey;
+    h1{
+    text-decoration: underline;
+}       
+}
+
+
+h1 {
+  color: blue;
+}
+
+li {
+  margin: 10px;
+  list-style-type: none;
+}
