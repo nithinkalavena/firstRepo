@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Layout2.css">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">ShopEasy</div>
+        <div class="list" id="nav">
+            <li>Home</li>
+            <li>About</li>
+            <li>Services</li>
+            <li>Contact</li>
+        </div>
+        <div class="btn">Login</div>
+        <div id="ham" onclick="tg()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <script>
+        function tg(){
+            document.getElementById('nav').classList.toggle('active')
+            document.getElementById('ham').classList.toggle('active')
+        }
+    </script>
+</body>
+</html>

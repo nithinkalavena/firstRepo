@@ -1,0 +1,31 @@
+.container{
+    display: flex;
+    gap: 20px;
+}
+.card{
+    border: 2px solid black;
+    border-radius: 8px;
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+button{
+    cursor: pointer;
+    padding: 5px 10px;
+    border: 0;
+    background-color: #ff9800;
+    color: black;
+    border-radius: 4px;
+}
+button:hover{
+    background-color: #e68900;
+    color: white;
+    
+}
+.card:hover{
+    background-color: lightgrey;    
+}
