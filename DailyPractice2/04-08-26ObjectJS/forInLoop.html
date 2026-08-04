@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    for in loop for objects 
+    <script>
+        let person = {
+            name:'myName',
+            age:19,
+            city:'hyd'
+        }
+        
+        for(let key in person)
+            console.log(key+": "+person[key])
+
+        console.log(Object.keys(person))
+        console.log(Object.values(person))
+        
+    </script>
+</body>
+</html>

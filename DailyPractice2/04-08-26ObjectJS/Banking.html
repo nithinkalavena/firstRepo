@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+</head>
+<body>
+    <h2>Bank Account</h2>
+    <p id="balance">Balance:</p>
+    <input type="number" id="number" placeholder="enter amount">
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+    <script>
+        let account = {
+            holder:'customer',
+            balance:0,
+            deposit(amount){
+                this.balance+=amount
+                updateBalance()
+            },
+            withdraw(amount){
+                if(amount > this.balance){
+                    alert('Insufficient Balance')
+                    return
+                }
+                this.balance-=amount
+                updateBalance()
+            }
+        }
+        function updateBalance(){
+            document.getElementById('balance').textContent = 'Balance: '+ account.balance
+        }
+        function deposit(){
+            let amount = Number(document.getElementById('number').value)
+            if(amount > 0)
+                account.deposit(amount)
+
+            document.getElementById('number').value = ''
+        }
+        function withdraw(){
+            let amount = Number(document.getElementById('number').value)
+            if(amount > 0)
+                account.withdraw(amount)
+
+            document.getElementById('number').value = ''
+        }
+    </script>
+</body>
+</html>

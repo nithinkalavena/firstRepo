@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login section</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <h2>Login Page</h2>
+    <table>
+        <tr>
+            <th>Username</th>
+            <td>:</td>
+            <td><input type="text" id="username" placeholder="enter username"></td>
+        </tr>
+        <tr>
+            <th>Password</th>
+            <td>:</td>
+            <td><input type="password" id="pswd" placeholder="enter password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td><button onclick="login()">Login</button></td>
+        </tr>
+    </table>
+    <h2 id="txt"></h2>
+    <script>
+        let userAccount = {
+            username:'admin',
+            password:'12345',            
+            login(inputUsername,inputPassword){
+                if(this.password === inputPassword && this.username === inputUsername){                    
+                    console.log('Login sucessfull')
+                    document.getElementById('txt').textContent = '✅ Login Successfull'
+                    document.getElementById('txt').style.color = "green"
+                }else{
+                    console.log('Wrong Password')
+                    document.getElementById('txt').textContent = '❌ Invalid username or Password'
+                    document.getElementById('txt').style.color = "red"
+                }
+            }
+        }
+        function login(){
+            let name = document.getElementById('username').value
+            let pswd = document.getElementById('pswd').value
+            if (name === "" && pswd === "") {
+                document.getElementById('txt').textContent = "⚠ Please enter username and password.";
+                document.getElementById('txt').style.color = "orange";
+                return;
+            }
+            if (name === "") {
+                document.getElementById('txt').textContent = "⚠ Please enter username.";
+                document.getElementById('txt').style.color = "orange";
+                return;
+            }
+            if (pswd === "") {
+                document.getElementById('txt').textContent = "⚠ Please enter password.";
+                document.getElementById('txt').style.color = "orange";
+                return;
+            }
+            userAccount.login(name,pswd)
+            document.getElementById('username').value = ''
+            document.getElementById('pswd').value = ''
+        }
+    </script>
+</body>
+</html>
